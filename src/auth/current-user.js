@@ -4,7 +4,7 @@ export const currentUser = async () => {
   const session = await baseAuth();
 
   if (!session?.user) {
-    return null;
+    return null; // User is not authenticated
   }
 
   const user = session.user;
